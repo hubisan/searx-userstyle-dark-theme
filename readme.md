@@ -14,6 +14,10 @@ not available yet
 
 To make it work set the theme to «oscar» and the style to «Logicodev» in the preferences of your searx.ch. This setting is the default on most searx sites.
 
+## Screenshot
+
+![screenshot of searx dark theme](searx-dark-theme-screenshot.png)
+
 ## Supported Urls
 
 The style is applied on following urls:

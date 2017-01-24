@@ -6,3 +6,5 @@
 *.gitignore text eol=lf
 *.gitattributes text eol=lf
 *.css text eol=lf
+*.js text eol=lf
+*.md text eol=lf
