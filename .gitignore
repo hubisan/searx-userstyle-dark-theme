@@ -1,0 +1,12 @@
+# Created by https://www.gitignore.io/api/windows,microsoftoffice
+
+### Windows ###
+# Windows image file caches
+*Thumbs.db
+*ehthumbs.db
+
+# Folder config file
+*Desktop.ini
+
+# Recycle Bin used on file shares
+.BIN/
