@@ -537,7 +537,7 @@
     /* RIGHT PANNEL */
     .panel {
         border: none !important;
-        background-color: #333 !important;
+        background-color: #111 !important;
     }
     @media (max-width: 991px) {
         #sidebar_results {
