@@ -43,6 +43,11 @@
         color: #84adff !important;
         border-bottom: 1px solid #84adff;
     }
+    /* SELECT */
+    select:focus {
+        outline: 1px solid #84adff !important;
+        box-shadow: none !important;
+    }
     /* BUTTONS */
     button {
         outline: 0 !important;
@@ -90,19 +95,22 @@
         border: none;
     }
     /* NAVIGATION BAR */
+    /* will be obsolete in upcoming searx version as navbar is replaced with
+   serax-navbar and more compact already
+  */
     .navbar {
-        min-height: auto !important;
         height: auto !important;
-        padding-bottom: 2px !important;
-        padding-top: 2px !important;
+        min-height: auto !important;
         margin-bottom: 12px !important;
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
     }
 
     a.navbar-brand {
+        height: auto !important;
+        min-height: auto !important;
         color: #01d7d4 !important;
         outline: 0;
-        min-height: auto !important;
-        height: auto !important;
         font-size: 14px !important;
     }
 
@@ -112,13 +120,13 @@
         border-color: transparent !important;
     }
     /* MENU */
-    /* z-index way to high, is even in front of modal */
+    /* z-index too high, it's in front of modal (images) */
     .menu {
         z-index: 1000 !important;
-        min-height: auto !important;
         height: auto !important;
-        padding-bottom: 2px !important;
+        min-height: auto !important;
         padding-top: 2px !important;
+        padding-bottom: 2px !important;
         line-height: 30px !important;
     }
 
@@ -175,22 +183,25 @@
         color: #ccc !important;
     }
     @media (max-width: 480px) {
+        .result {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+
         .result .clearfix + .pull-right {
             display: none !important;
         }
     }
-    @media (max-width: 767px) {
-        .result .text-muted {
-            overflow: hidden !important;
-            text-overflow: ellipsis !important;
-        }
 
-        .result .text-muted small {
-            white-space: nowrap !important;
-        }
+    .external-link,
+    .result .text-muted {
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
     }
 
+    .external-link,
     .result .text-muted small {
+        white-space: nowrap !important;
         color: #47c299 !important;
     }
 
@@ -227,6 +238,12 @@
     .result-default {
         padding: 10px 20px !important;
     }
+    @media (max-width: 480px) {
+        .result-default {
+            padding-right: 0 !important;
+            padding-left: 5px !important;
+        }
+    }
 
     .result-default:hover {
         background-color: #111;
@@ -248,6 +265,12 @@
     /* search files */
     .result-torrent {
         padding: 10px 20px !important;
+    }
+    @media (max-width: 480px) {
+        .result-torrent {
+            padding-right: 0 !important;
+            padding-left: 5px !important;
+        }
     }
 
     .result-torrent:hover {
@@ -315,6 +338,12 @@
     .result-map {
         padding: 10px 20px !important;
     }
+    @media (max-width: 480px) {
+        .result-map {
+            padding-right: 0 !important;
+            padding-left: 5px !important;
+        }
+    }
 
     .result-map:hover {
         background-color: #111;
@@ -330,6 +359,12 @@
     /* SEARCH VIDEOS */
     .result-videos {
         padding: 10px 20px !important;
+    }
+    @media (max-width: 480px) {
+        .result-videos {
+            padding-right: 0 !important;
+            padding-left: 5px !important;
+        }
     }
 
     .result-videos:hover {
@@ -382,11 +417,12 @@
         #categories label,
         .search_categories .input-group-addon,
         .search_categories label {
+            -webkit-box-flex: 0 !important;
+            -ms-flex-positive: 0 !important;
             flex-grow: 0 !important;
         }
     }
 
-    #catburlywoodabel:last-child,
     #categories .input-group-addon:last-child,
     .search_categories .input-group-addon:last-child,
     .search_categories label:last-child {
@@ -407,13 +443,24 @@
         background-color: #555 !important;
     }
 
-    #advanced-search-container select {
+    .col-xs-6.col-md-2.search-margin {
+        padding-right: 5px !important;
+    }
+
+    .col-xs-6.col-md-2.search-margin + .col-xs-6.col-md-2.search-margin {
+        padding-right: 15px !important;
+        padding-left: 5px !important;
+    }
+
+    #advanced-search-container select,
+    #search_form select {
         color: #ccc;
         border-color: black !important;
         background: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQ1MS44NDcgNDUxLjg0NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDUxLjg0NyA0NTEuODQ3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTIyNS45MjMsMzU0LjcwNmMtOC4wOTgsMC0xNi4xOTUtMy4wOTItMjIuMzY5LTkuMjYzTDkuMjcsMTUxLjE1N2MtMTIuMzU5LTEyLjM1OS0xMi4zNTktMzIuMzk3LDAtNDQuNzUxICAgYzEyLjM1NC0xMi4zNTQsMzIuMzg4LTEyLjM1NCw0NC43NDgsMGwxNzEuOTA1LDE3MS45MTVsMTcxLjkwNi0xNzEuOTA5YzEyLjM1OS0xMi4zNTQsMzIuMzkxLTEyLjM1NCw0NC43NDQsMCAgIGMxMi4zNjUsMTIuMzU0LDEyLjM2NSwzMi4zOTIsMCw0NC43NTFMMjQ4LjI5MiwzNDUuNDQ5QzI0Mi4xMTUsMzUxLjYyMSwyMzQuMDE4LDM1NC43MDYsMjI1LjkyMywzNTQuNzA2eiIgZmlsbD0iI2NjY2NjYyIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=") 96% no-repeat !important;
         background-color: #333 !important;
     }
-    /* always show categories but not time / location*/
+    /* always show categories but not time / location
+   not working anymore in newest version, as there is no more checkbox */
     #check-advanced:not(:checked) ~ #advanced-search-container {
         display: block !important;
     }
@@ -432,6 +479,49 @@
 
     #check-advanced:checked + label {
         color: #CCC !important;
+    }
+
+    .result:not(.result-default):not(.result-torrent):not(.result-images):not(.result-map):not(.result-videos) {
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+        padding: 3px 3px 3px 13px !important;
+        border: none !important;
+        border-color: transparent !important;
+        background-color: transparent !important;
+        background-color: transparent !important;
+    }
+
+    .result.well:not(.result-default):not(.result-torrent):not(.result-images):not(.result-map):not(.result-videos) {
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+        padding: 3px 3px 3px 13px !important;
+        border: none !important;
+        border-color: transparent !important;
+        background-color: transparent !important;
+        background-color: transparent !important;
+    }
+
+    span.suggestion_item {
+        font-size: 14px !important;
+    }
+
+    form.suggestion_item {
+        margin-left: 0 !important;
+    }
+
+    .suggestion_item .btn {
+        color: #84adff !important;
+        border: 1px solid transparent !important;
+        background-color: transparent !important;
+        font-size: 14px !important;
+    }
+
+    .suggestion_item .btn:active,
+    .suggestion_item .btn:focus,
+    .suggestion_item .btn:hover {
+        text-decoration: none !important;
+        color: #84adff !important;
+        border-bottom: 1px solid #84adff !important;
     }
     /* RIGHT PANNEL */
     .panel {
@@ -584,6 +674,7 @@
         background: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQ1MS44NDcgNDUxLjg0NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDUxLjg0NyA0NTEuODQ3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTIyNS45MjMsMzU0LjcwNmMtOC4wOTgsMC0xNi4xOTUtMy4wOTItMjIuMzY5LTkuMjYzTDkuMjcsMTUxLjE1N2MtMTIuMzU5LTEyLjM1OS0xMi4zNTktMzIuMzk3LDAtNDQuNzUxICAgYzEyLjM1NC0xMi4zNTQsMzIuMzg4LTEyLjM1NCw0NC43NDgsMGwxNzEuOTA1LDE3MS45MTVsMTcxLjkwNi0xNzEuOTA5YzEyLjM1OS0xMi4zNTQsMzIuMzkxLTEyLjM1NCw0NC43NDQsMCAgIGMxMi4zNjUsMTIuMzU0LDEyLjM2NSwzMi4zOTIsMCw0NC43NTFMMjQ4LjI5MiwzNDUuNDQ5QzI0Mi4xMTUsMzUxLjYyMSwyMzQuMDE4LDM1NC43MDYsMjI1LjkyMywzNTQuNzA2eiIgZmlsbD0iI2NjY2NjYyIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=") 96% no-repeat !important;
         background-color: #333 !important;
         -moz-appearance: none;
+        -webkit-appearance: none;
         appearance: none;
     }
     /* MODAL STYLE (FOR IMAGES) */
@@ -598,12 +689,12 @@
     }
 
     .modal-title {
+        overflow: hidden !important;
+        padding-right: 5px !important;
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;
         color: #ccc !important;
         font-weight: 700 !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        padding-right: 5px !important;
     }
 
     .modal-header .close {
@@ -659,16 +750,38 @@
     }
 
     .modal.fade .modal-dialog {
-        -webkit-transform: translate3d(0, 40px, 0) !important;
-        transform: translate3d(0, 40px, 0) !important;
         -webkit-transition: -webkit-transform 0.05s ease-out !important;
         transition: -webkit-transform 0.05s ease-out !important;
         transition: transform 0.05s ease-out !important;
         transition: transform 0.05s ease-out, -webkit-transform 0.05s ease-out !important;
+        -webkit-transform: translate3d(0, 40px, 0) !important;
+        transform: translate3d(0, 40px, 0) !important;
     }
 
     .modal.in .modal-dialog {
         -webkit-transform: translate3d(0, 0, 0) !important;
         transform: translate3d(0, 0, 0) !important;
+    }
+    /* VIM HELP BOX */
+    #vim-hotkeys-help {
+        border: 5px solid #777 !important;
+        background-color: #333 !important;
+        box-shadow: none !important;
+    }
+
+    #vim-hotkeys-help h3 {
+        margin-bottom: 24px !important;
+    }
+
+    #vim-hotkeys-help .panel-heading {
+        color: #222 !important;
+        background-color: #aaa !important;
+        font-weight: 700 !important;
+    }
+
+    #vim-hotkeys-help li kbd {
+        border: none !important;
+        box-shadow: none !important;
+        font-weight: 700 !important;
     }
 }

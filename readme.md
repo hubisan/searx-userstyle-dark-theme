@@ -36,4 +36,4 @@ If you find a bug, please create a new issue. Pull requests are also welcome.
 
 ## License
 
-Copyright (c) 2016 Daniel Hubmann. Licensed under [MIT](LICENSE).
+Copyright (c) 2017 Daniel Hubmann. Licensed under [MIT](LICENSE).
