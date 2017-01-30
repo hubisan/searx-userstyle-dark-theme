@@ -43,6 +43,11 @@
         color: #84adff !important;
         border-bottom: 1px solid #84adff;
     }
+    a:visited,
+    a:visited .highlight {
+        color: #536384 !important;
+    }
+    
     /* SELECT */
     select:focus {
         outline: 1px solid #84adff !important;
@@ -106,7 +111,8 @@
         padding-bottom: 2px !important;
     }
 
-    a.navbar-brand {
+    a.navbar-brand,
+    .searx-navbar a {
         height: auto !important;
         min-height: auto !important;
         color: #01d7d4 !important;
@@ -115,7 +121,11 @@
     }
 
     .navbar-brand:active,
-    .navbar-brand:hover {
+    .navbar-brand:hover,
+    .navbar-brand:visited,
+    .searx-navbar a:active, 
+    .searx-navbar a:hover, 
+    .searx-navbar a:visited {
         color: #01d7d4 !important;
         border-color: transparent !important;
     }
@@ -254,7 +264,7 @@
         margin-left: -3px !important;
         border: none !important;
         border-left: 3px solid #00bedb !important;
-        background-color: #172f34 !important;
+        background-color: #0C181A !important;
     }
 
     .result-default .result-content {
@@ -408,9 +418,9 @@
     .search_categories label {
         padding-right: 10px !important;
         padding-left: 10px !important;
-        color: #ccc !important;
+        color: #999 !important;
         border: 1px solid black !important;
-        background-color: #333 !important;
+        background-color: #111 !important;
     }
     @media (max-width: 767px) {
         #categories .input-group-addon,
@@ -431,16 +441,17 @@
 
     #categories input[type=checkbox]:checked + label,
     .search_categories input[type=checkbox]:checked + label {
-        color: #222 !important;
+        color: black !important;
         border: 1px solid black !important;
-        background-color: #aaa !important;
+        background-color: #666 !important;
+        font-weight: 400 !important;
     }
 
     #categories .input-group-addon:hover,
     #categories label:hover,
     .search_categories .input-group-addon:hover,
     .search_categories label:hover {
-        background-color: #555 !important;
+        background-color: #222 !important;
     }
 
     .col-xs-6.col-md-2.search-margin {
@@ -454,10 +465,10 @@
 
     #advanced-search-container select,
     #search_form select {
-        color: #ccc;
+        color: #999;
         border-color: black !important;
         background: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQ1MS44NDcgNDUxLjg0NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDUxLjg0NyA0NTEuODQ3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTIyNS45MjMsMzU0LjcwNmMtOC4wOTgsMC0xNi4xOTUtMy4wOTItMjIuMzY5LTkuMjYzTDkuMjcsMTUxLjE1N2MtMTIuMzU5LTEyLjM1OS0xMi4zNTktMzIuMzk3LDAtNDQuNzUxICAgYzEyLjM1NC0xMi4zNTQsMzIuMzg4LTEyLjM1NCw0NC43NDgsMGwxNzEuOTA1LDE3MS45MTVsMTcxLjkwNi0xNzEuOTA5YzEyLjM1OS0xMi4zNTQsMzIuMzkxLTEyLjM1NCw0NC43NDQsMCAgIGMxMi4zNjUsMTIuMzU0LDEyLjM2NSwzMi4zOTIsMCw0NC43NTFMMjQ4LjI5MiwzNDUuNDQ5QzI0Mi4xMTUsMzUxLjYyMSwyMzQuMDE4LDM1NC43MDYsMjI1LjkyMywzNTQuNzA2eiIgZmlsbD0iI2NjY2NjYyIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=") 96% no-repeat !important;
-        background-color: #333 !important;
+        background-color: #111 !important;
     }
     /* always show categories but not time / location
    not working anymore in newest version, as there is no more checkbox */
@@ -565,6 +576,10 @@
 
     .infobox .btn a:hover {
         border-bottom: 1px solid transparent;
+    }
+    
+    .infobox .btn a:visited {
+        color: #84adff !important;
     }
     /* preferences tabs */
     #search_form[action="/preferences"] ul.nav-tabs.nav-justified {
