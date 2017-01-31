@@ -43,11 +43,12 @@
         color: #84adff !important;
         border-bottom: 1px solid #84adff;
     }
+
     a:visited,
     a:visited .highlight {
-        color: #536384 !important;
+        color: #9A8DD9 !important;
+        border-bottom-color: #9A8DD9;
     }
-    
     /* SELECT */
     select:focus {
         outline: 1px solid #84adff !important;
@@ -109,24 +110,29 @@
         margin-bottom: 12px !important;
         padding-top: 2px !important;
         padding-bottom: 2px !important;
+        background-color: #141826 !important;
     }
 
-    a.navbar-brand,
-    .searx-navbar a {
+    .searx-navbar {
+        background-color: #141826 !important;
+    }
+
+    .searx-navbar a,
+    a.navbar-brand {
         height: auto !important;
         min-height: auto !important;
-        color: #01d7d4 !important;
+        color: #01B2B0 !important;
         outline: 0;
-        font-size: 14px !important;
+        font-size: 13px !important;
     }
 
     .navbar-brand:active,
     .navbar-brand:hover,
     .navbar-brand:visited,
-    .searx-navbar a:active, 
-    .searx-navbar a:hover, 
+    .searx-navbar a:active,
+    .searx-navbar a:hover,
     .searx-navbar a:visited {
-        color: #01d7d4 !important;
+        color: #01B2B0 !important;
         border-color: transparent !important;
     }
     /* MENU */
@@ -141,7 +147,7 @@
     }
 
     .menu a {
-        font-size: 14px !important;
+        font-size: 13px !important;
     }
     /* SEARCH BAR */
     #search_form input[type="search"] {
@@ -551,7 +557,7 @@
 
     .panel-heading {
         border: none !important;
-        background-color: #555 !important;
+        background-color: #444 !important;
     }
 
     .panel-title {
@@ -577,7 +583,7 @@
     .infobox .btn a:hover {
         border-bottom: 1px solid transparent;
     }
-    
+
     .infobox .btn a:visited {
         color: #84adff !important;
     }
@@ -701,6 +707,7 @@
     .modal-header {
         border: none !important;
         background-color: #555 !important;
+        padding: 0 !important;
     }
 
     .modal-title {
@@ -710,16 +717,18 @@
         text-overflow: ellipsis !important;
         color: #ccc !important;
         font-weight: 700 !important;
+        padding: 10px !important;
+        line-height: 30px !important;
     }
 
     .modal-header .close {
-        margin-top: -3px !important;
-        margin-right: 0 !important;
+        margin: 0 !important;
         color: #ccc !important;
         text-shadow: none !important;
         font-size: 30px !important;
         font-weight: 400 !important;
-        line-height: 1 !important;
+        padding: 10px 15px !important;
+        line-height: 30px !important;
     }
 
     .modal-header .close:hover {
