@@ -1,16 +1,28 @@
 # Searx Dark Theme
 
-This is a dark theme for [searx](https://asciimoo.github.io/searx/) the free internet metasearch engine. This theme can be applied to your browser with [stylish](https://userstyles.org).
+This is a dark theme for [searx](https://asciimoo.github.io/searx/) the free internet metasearch engine. This theme can be applied to your browser from [userstyles](https://userstyles.org/styles/138093/searx-dark-theme-for-theme-oscar-logicodev) with an add-on or by installing it manually.
 
 It includes some minor improvements to the user interface.
 
 ## Installation
 
-The theme is availabe for stylish.
-
-Install the theme from userstyles.org: [https://userstyles.org/styles/138093/searx-dark-theme-for-theme-oscar-logicodev](https://userstyles.org/styles/138093/searx-dark-theme-for-theme-oscar-logicodev). You can of course also copy and paste the text.
-
 To make it work set the theme to «oscar» and the style to «Logicodev» in the preferences of your searx site. This setting is the default on most searx sites.
+
+### Installation With Add-On
+
+Install the theme from userstyles.org with an add-on. [https://userstyles.org/styles/138093/searx-dark-theme-for-theme-oscar-logicodev](https://userstyles.org/styles/138093/searx-dark-theme-for-theme-oscar-logicodev). You can also just copy and paste the css into your add-on editor.
+
+Some add-ons you can use:
+- [StylRRR](https://addons.mozilla.org/En-us/firefox/addon/stylrrr/) *recommended*
+- [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
+- Stylish was sold to a data mining company, so rather not use that anymore.
+
+### Firefox Manual Installation
+
+- Go to your profile folder ([about:support](about:support) > Open Folder).
+- Go to the chrome folder (create it if it doesn't exist).
+- Insert everything from searx-dark-theme-stylish.css into userContent.css (create it if it doesn't exist).
+- Restart the browser.
 
 ## Screenshot
 
