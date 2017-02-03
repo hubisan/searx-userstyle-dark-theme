@@ -21,9 +21,9 @@ Some add-ons you can use:
 
 - Go to your profile folder ([about:support](about:support) > Open Folder).
 - Go into the chrome folder (create it if it doesn't exist).
-- Add the file searx-dark-theme-stylish.css.
+- Clone this repo into the folder or donwload the repo and paste it manually.
 - Create the file userContent.css if it doesn't exist.
-- Add an import rule to userContent.css: `@import url("searx-dark-theme-stylish.css");`
+- Add an import rule to userContent.css: `@import url("searx-userstyle-dark-theme/searx-dark-theme-stylish.css");`
 - Restart the browser.
 
 ## Screenshot
