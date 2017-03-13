@@ -1,5 +1,5 @@
 @namespace url(http://www.w3.org/1999/xhtml);
-@-moz-document domain("searx.me"), domain("searx.de"), domain("searx.ch"), domain("searx.info"), domain("searx.laquadrature.net"), domain("s3arch.eu"), domain("search.koehn.com"), domain("searx.brihx.fr"), domain("searx.oe5tpo.com"), domain("seeks.hsbp.org"), domain("search.kujiu.org"), domain("searx.new-admin.net"), domain("search.homecomputing.fr"), domain("searx.potato.hu"), domain("search.jpope.org"), domain("searx.fossencdi.org"), domain("searx.schrodinger.io"), domain("search.blackit.de"), domain("searx.aquilenet.fr"), domain("search.azkware.net"), domain("searx.netzspielplatz.de"), domain("searx.32bitflo.at"), domain("searx.nulltime.net"), domain("suche.elaon.de"), domain("search.notoriousdev.com"), domain("searx.4ray.co") {
+@-moz-document domain("searx.me"), domain("searx.de"), domain("searx.ch"), domain("searx.info"), domain("searx.laquadrature.net"), domain("s3arch.eu"), domain("search.koehn.com"), domain("searx.brihx.fr"), domain("searx.oe5tpo.com"), domain("seeks.hsbp.org"), domain("search.kujiu.org"), domain("searx.new-admin.net"), domain("search.homecomputing.fr"), domain("searx.potato.hu"), domain("search.jpope.org"), domain("searx.fossencdi.org"), domain("searx.schrodinger.io"), domain("search.blackit.de"), domain("searx.aquilenet.fr"), domain("search.azkware.net"), domain("searx.netzspielplatz.de"), domain("searx.32bitflo.at"), domain("searx.nulltime.net"), domain("suche.elaon.de"), domain("search.notoriousdev.com"), domain("searx.4ray.co"), domain("https://www.heraut.eu/search"), domain(" https://www.citizen-cam.de"), domain(" https://searx.at"), domain(" https://search.static.lu"), domain(" https://searx.info"), domain(" https://search.matrix.ac"), domain(" https://searx.drakonix.net"), domain(" https://www.searx.space"), domain(" https://search.alecpap.com"), domain(" https://searx.techregion.de"), domain(" https://search.st8.at"), domain(" https://search.kosebamse.com"), domain(" https://perfectpixel.de/searx"), domain(" https://search.paviro.de"), domain(" https://searx.infini.fr"), domain(" https://search.kakise.xyz"), domain(" https://framabee.org"), domain(" https://searx.coding4schoki.org") {
     /* GLOBAL */
     body {
         overflow-y: scroll !important;
@@ -259,7 +259,9 @@
         margin-bottom: 0 !important;
     }
     /* search general */
-    .result-default {
+    .result-default,
+    .result-default.well,
+    .result.result-default {
         padding: 10px 20px !important;
     }
     @media (max-width: 480px) {
