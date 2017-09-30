@@ -16,6 +16,7 @@ Some add-ons you can use:
 - [StylRRR](https://addons.mozilla.org/En-us/firefox/addon/stylrrr/) *recommended*
 - [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
 - [xStyle](https://addons.mozilla.org/en-US/firefox/addon/xstyle/)
+- [stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
 
 ### Firefox Manual Installation
 
