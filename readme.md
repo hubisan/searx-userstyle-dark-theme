@@ -15,7 +15,7 @@ Install the theme from userstyles.org with an add-on: [https://userstyles.org/st
 Some add-ons you can use:
 - [StylRRR](https://addons.mozilla.org/En-us/firefox/addon/stylrrr/) *recommended*
 - [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
-- Stylish was sold to a data mining company, so rather not use that anymore.
+- [xStyle](https://addons.mozilla.org/en-US/firefox/addon/xstyle/)
 
 ### Firefox Manual Installation
 
